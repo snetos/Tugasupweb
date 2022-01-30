@@ -1,0 +1,65 @@
+<html>
+<title>Menu Navigation Tab </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+    <div class="cover" style="position: relative; text-align: center;color: white">
+        <img src="image/salju.jpg" style="height: 200px; width: 100%; filter:brightness(50%)">
+        <div class="w3-display-middle w3-large">
+            <h1>Selamat Datang</h1>
+        </div>
+    </div>
+
+    <div class="w3-bar w3-black">
+        <button class="w3-bar-item w3-button" onclick="openKota('mobil')">mobil</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('unikom')">Kampus</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('kampus')">jeruk</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('foto')">foto</button>
+    </div>
+    <div id="mobil" class="w3-container menus" style="display:none">
+        <div class="w3-card-4 w3-display-middle w3-margin-top" style="width:300px">
+            <img src="image/mobil.jpg" class="w3-animate-fading" alt="Person" style="width:100%">
+            <div class="w3-container">
+                <h4><b>Mobil</b></h4>
+            </div>
+        </div>
+    </div>
+    <div id="unikom" class="w3-container menus" style="display:none">
+        <div class="w3-card-4 w3-display-middle w3-margin-top" style="width:300px">
+            <img src="image/unikom_dago.jpg" class=" w3-animate-bottom" alt="Person" style="width:100%">
+            <div class="w3-container">
+                <h4><b>Unikom Dago</b></h4>
+            </div>
+        </div>
+    </div>
+    <div id="kampus" class="w3-container menus" style="display:none">
+        <div class="w3-card-4 w3-display-middle w3-margin-top" style="width:300px">
+            <img src="image/jeruk.jpg" class="w3-animate-top" alt="Person" style="width:100%">
+            <div class="w3-container">
+                <h4><b>Jeruk</b></h4>
+            </div>
+        </div>
+    </div>
+    <div id="foto" class="w3-container menus" style="display:none">
+        <div class="w3-card-4 w3-display-middle w3-margin-top" style="width:300px">
+            <img src="image/joki.jpeg" class="w3-animate-zoom" alt="Person" style="width:100%">
+            <div class="w3-container">
+                <h4><b>Foto orang bermain komputer</b></h4>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openKota(namaKota) {
+            var i;
+            var x = document.getElementsByClassName("menus");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(namaKota).style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
